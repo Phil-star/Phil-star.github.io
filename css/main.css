@@ -1676,7 +1676,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #7a11ff;
+  background: #cda1ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2735,7 +2735,7 @@ ul.breadcrumb li+li:last-child {
   }
 }
 body {
-  background: url("https://s2.ax1x.com/2019/08/22/md5YEd.png") no-repeat;
+  background: url("https://s2.ax1x.com/2019/08/22/md5YEd.png") no-repeat 100% center scroll;
   background-attachment: fixed;
   background-position: 50% 50%;
 }
@@ -2749,7 +2749,7 @@ body {
   background: rgba(255,255,255,0.8) none repeat scroll !important;
 }
 .post {
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 60px;
   padding: 25px;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
