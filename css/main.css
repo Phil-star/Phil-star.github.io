@@ -1676,7 +1676,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #6be728;
+  background: #ff2d4f;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2769,13 +2769,8 @@ body {
   border-bottom: none;
   border-bottom: 1px solid #fc6423;
 }
-.btn {
-  color: #fff !important;
-  text-decoration: none !important;
-  border: 2px solid #222 !important;
-}
-.btn:hover {
-  color: #222 !important;
+.posts-expand .post-body img {
+  border: 0px solid #ddd !important;
 }
 a#download {
   display: inline-block;
