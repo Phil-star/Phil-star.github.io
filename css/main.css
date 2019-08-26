@@ -1676,7 +1676,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff2d4f;
+  background: #a4ffff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2735,13 +2735,19 @@ ul.breadcrumb li+li:last-child {
   }
 }
 body {
-  background: url("https://s2.ax1x.com/2019/08/22/md5YEd.png") no-repeat 100% center scroll;
+  background: url("https://s2.ax1x.com/2019/08/22/md5YEd.png") no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }
 .main-inner {
   background: #fff;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 .content {
   border-radius: 20px;
