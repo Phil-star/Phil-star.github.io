@@ -66,7 +66,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/25/mcF9Ln.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/25/mcFqX9.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/25/mcu5kj.png">
-<meta property="og:updated_time" content="2019-08-24T19:50:09.648Z">
+<meta property="og:updated_time" content="2019-08-29T06:24:07.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础篇（二）运算符">
 <meta name="twitter:description" content="算数运算符 算数运算符中又分为一下几种：  “+，-，* ，/，%”属于二元运算符（其表示为必须有两个操作数才能完成运算的运算符）   “++，–”属于一元运算符（只需一个操作数）   “%“又叫取摸运算符（即求余操作）">
@@ -189,7 +189,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">2</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">3</span></a>
 
   </li>
       
@@ -215,7 +215,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">4</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">5</span></a>
 
   </li>
   </ul>
@@ -279,7 +279,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-25 03:50:09" itemprop="dateModified" datetime="2019-08-25T03:50:09+08:00">2019-08-25</time>
+                <time title="修改时间：2019-08-29 14:24:07" itemprop="dateModified" datetime="2019-08-29T14:24:07+08:00">2019-08-29</time>
               </span>
             
           
@@ -330,7 +330,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id><a href="#" class="headerlink" title></a><img src="https://s2.ax1x.com/2019/08/25/mcuXBF.png" alt="JAVA"></h2><h2 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h2><blockquote>
+        <p><img src="https://s2.ax1x.com/2019/08/25/mcuXBF.png" alt="JAVA"></p><h2 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h2><blockquote>
 <p><strong>算数运算符中又分为一下几种：</strong></p>
 <ol>
 <li>“+，-，* ，/，%”属于二元运算符（<em>其表示为必须有两个操作数才能完成运算的运算符</em>）  </li>
@@ -338,6 +338,7 @@
 <li>“%“又叫取摸运算符（<em>即求余操作</em>）  </li>
 </ol>
 </blockquote><a id="more"></a>
+
 <h3 id="运算规则"><a href="#运算规则" class="headerlink" title="运算规则"></a>运算规则</h3><p><strong>整数运算:</strong><br>1.如果两个操作数有一个为Long，则结果也为long。<br>2.没有long时，结果为int。即使操作数全为short，byte，结果也是int。<br><strong>浮点运算:</strong><br>1.如果两个操作数有一个为double，则结果为double。<br>2.只有两个操作数都是float，则结果才为float。<br><strong>取模运算：</strong><br>1.其操作数可以为浮点数，一般使用整数，结果是“余数”，“余数”符号和左边操作数相同，如：7%3=1，-7%3=-1，7%-3=1。 </p>
 <p><strong>相关代码：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">*测试运算符</span><br><span class="line">*@autor Philstar</span><br><span class="line">*</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">public class TestOperator01&#123;</span><br><span class="line">	public static void main(String[] args)&#123;</span><br><span class="line">		</span><br><span class="line">		byte a=1;</span><br><span class="line">		int  b=3;</span><br><span class="line">		long c=5;</span><br><span class="line">		//byte a1=a+b;  报错：该结果为int型</span><br><span class="line">		//int  b2=b+c;  报错：该结果为long型</span><br><span class="line">		</span><br><span class="line">		//float f1=3.14; 报错：浮点数默认为double型</span><br><span class="line">		float f1=3.14F;</span><br><span class="line">		//float f2=f1+6.2; 报错：又有个数是double结果就是double</span><br><span class="line">		</span><br><span class="line">		//测试自增与自减</span><br><span class="line">		int d=3;</span><br><span class="line">		int e=d++; //执行后e=3,先给e赋值再自增</span><br><span class="line">		int f=++d；//执行后f=4,先自增再赋值</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -432,6 +433,10 @@
 
             <div class="post-nav-prev post-nav-item">
               
+                <a href="/2019/08/29/Java基础篇（三）-面向过程与面向对象/" rel="prev" title="Java基础篇（三） 面向对象基础知识">
+                  Java基础篇（三） 面向对象基础知识 <i class="fa fa-chevron-right"></i>
+                </a>
+              
             </div>
           </div>
         
@@ -483,7 +488,7 @@
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc">
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算数运算符"><span class="nav-number">2.</span> <span class="nav-text">算数运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运算规则"><span class="nav-number">2.1.</span> <span class="nav-text">运算规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#赋值运算符"><span class="nav-number">3.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系运算符"><span class="nav-number">4.</span> <span class="nav-text">关系运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">5.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位运算符"><span class="nav-number">6.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串链接符"><span class="nav-number">7.</span> <span class="nav-text">字符串链接符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件运算符"><span class="nav-number">8.</span> <span class="nav-text">条件运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符优先级"><span class="nav-number">9.</span> <span class="nav-text">运算符优先级</span></a></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算数运算符"><span class="nav-number">1.</span> <span class="nav-text">算数运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运算规则"><span class="nav-number">1.1.</span> <span class="nav-text">运算规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#赋值运算符"><span class="nav-number">2.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系运算符"><span class="nav-number">3.</span> <span class="nav-text">关系运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">4.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位运算符"><span class="nav-number">5.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串链接符"><span class="nav-number">6.</span> <span class="nav-text">字符串链接符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件运算符"><span class="nav-number">7.</span> <span class="nav-text">条件运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符优先级"><span class="nav-number">8.</span> <span class="nav-text">运算符优先级</span></a></li></ol></div>
           </div>
         
       </div>
@@ -503,7 +508,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -541,7 +546,9 @@
         
           
         
-        <span class="site-state-item-count">2</span>
+          
+        
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
