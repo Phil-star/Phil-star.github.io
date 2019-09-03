@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32x32 tx.ico?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16x16 tx.ico?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-PhjrOrPV&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+<meta name="keywords" content="基础算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基础算法题 P11-P20">
+<meta property="og:url" content="https://philxin.top/2019/09/03/基础算法题-P11-P20/index.html">
+<meta property="og:site_name" content="Philstar&#39;s Blog">
+<meta property="og:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-PhjrOrPV&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-03T19:47:48.153Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基础算法题 P11-P20">
+<meta name="twitter:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-PhjrOrPV&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+  <link rel="canonical" href="https://philxin.top/2019/09/03/基础算法题-P11-P20/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>基础算法题 P11-P20 | Philstar's Blog</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <a href="https://github.com/Phil-star" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Philstar's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">4</span></a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">9</span></a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://philxin.top/2019/09/03/基础算法题-P11-P20/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CodeWang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s2.ax1x.com/2019/08/22/matBMF.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Philstar's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">基础算法题 P11-P20
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-03 14:05:13" itemprop="dateCreated datePublished" datetime="2019-09-03T14:05:13+08:00">2019-09-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-04 03:47:48" itemprop="dateModified" datetime="2019-09-04T03:47:48+08:00">2019-09-04</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/基础算法练习/" itemprop="url" rel="index"><span itemprop="name">基础算法练习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            <span class="post-meta-item" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+        
+      
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/09/03/基础算法题-P11-P20/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2019/09/03/基础算法题-P11-P20/" itemprop="commentCount"></span></a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <div id="aplayer-PhjrOrPV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div><script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-PhjrOrPV"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "Can't Hold Us",
+              author: "Madilyn Bailey(翻唱)",
+              url: "http://music.163.com/song/media/outer/url?id=32785265.mp3",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script><a id="more"></a>
+        
+        
+<h2 id="P11-求不重复数字"><a href="#P11-求不重复数字" class="headerlink" title="P11 求不重复数字"></a>P11 求不重复数字</h2><p><span id="inline-blue">题目：</span><br>有 1、2、3、4 个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？ </p>
+<blockquote>
+<p><strong>分析：</strong> 可填在百位、十位、个位的数字都是 1、2、3、4。组成所有的排列后再去 掉不满足条件的排<br>列  </p>
+</blockquote>
+<p><span id="inline-purple">代码：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * P11 求不重复数字</span><br><span class="line"> * @autor Philstar</span><br><span class="line"> */</span><br><span class="line">package top.philxin.practice;</span><br><span class="line"></span><br><span class="line">public class P11 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int count=0;</span><br><span class="line">		for(int i=1;i&lt;5;i++) &#123;</span><br><span class="line">			for(int j=1;j&lt;5;j++) &#123;</span><br><span class="line">				if(i!=j) &#123;</span><br><span class="line">					for(int k=1;k&lt;5;k++) &#123;</span><br><span class="line">					if(j!=k&amp;&amp;i!=k) &#123;</span><br><span class="line">						count++;</span><br><span class="line">						System.out.print(i*100+j*10+k+&quot;,&quot;);</span><br><span class="line">					&#125;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;总共能组成&quot;+count+&quot;个数字&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-green">结果：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">123,124,132,134,142,143,213,214,231,234,241,243,312,314,321,324,341,342,412,413,421,423,431,432,总共能组成24个数字</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="P12-计算奖金"><a href="#P12-计算奖金" class="headerlink" title="P12 计算奖金"></a>P12 计算奖金</h2><p><span id="inline-blue">题目：</span><br>企业发放的奖金根据利润提成。利润(I)低于或等于 10 万元时，奖金可提 10%；利润高于 10 万元，<br>低于 20 万元时，低于 10 万元的部分按 10%提成，高于 10 万元的部分，可可提成 7.5%；20 万到 40 万之间<br>时，高于 20 万元的部分，可提成 5%；40 万到 60 万之间时高于 40 万元的部分，可提成 3%；60 万到 100 万<br>之间时，高于 60 万元的部分，可提成 1.5%，高于 100 万元时，超过 100 万元的部分按 1%提成，从键盘输<br>入当月利润 I，求应发放奖金总数？<br><span id="inline-purple">代码：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * P12 计算奖金</span><br><span class="line"> * @autor Philstar</span><br><span class="line"> */</span><br><span class="line">package top.philxin.practice;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class P12 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		System.out.print(&quot;请输入当月利润（单位万元）：&quot;);</span><br><span class="line">		Scanner sc=new Scanner(System.in);</span><br><span class="line">		double i=sc.nextDouble();</span><br><span class="line">		double bonus=0;</span><br><span class="line">		double m1,m2,m3,m4,m5;</span><br><span class="line">		m1=10*0.1;</span><br><span class="line">		m2=m1+10*0.075;</span><br><span class="line">		m3=m2+20*0.05;</span><br><span class="line">		m4=m3+20*0.03;</span><br><span class="line">		m5=m4+40*0.015;</span><br><span class="line">		if(i&lt;=0) &#123;</span><br><span class="line">			System.out.println(&quot;输入有误！&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		else if(i&lt;=10) &#123;</span><br><span class="line">			bonus=i*0.1;</span><br><span class="line">		&#125;</span><br><span class="line">		else if(i&lt;=20) &#123;</span><br><span class="line">			bonus=(i-10)*0.075+m1;</span><br><span class="line">		&#125;</span><br><span class="line">		else if(i&lt;=40) &#123;</span><br><span class="line">			bonus=(i-20)*0.05+m2;</span><br><span class="line">		&#125;</span><br><span class="line">		else if(i&lt;=60) &#123;</span><br><span class="line">			bonus=(i-40)*0.03+m3;</span><br><span class="line">		&#125;</span><br><span class="line">		else if(i&lt;=100) &#123;</span><br><span class="line">			bonus=(i-60)*0.015+m4;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">			bonus=(i-100)*0.01+m5;</span><br><span class="line">		System.out.println(&quot;发放奖金为&quot;+bonus*10000+&quot;元&quot;);</span><br><span class="line">		sc.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-green">结果：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">请输入当月利润（单位万元）：150</span><br><span class="line">发放奖金为44500.0元</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="P13-根据条件求数字"><a href="#P13-根据条件求数字" class="headerlink" title="P13 根据条件求数字"></a>P13 根据条件求数字</h2><p><span id="inline-blue">题目：</span><br>一个整数，它加上 100 后是一个完全平方数，再加上 168 又是一个完全平方数，请问该数是多少？</p>
+<blockquote>
+<p><strong>分析：</strong>   </p>
+</blockquote>
+<p><span id="inline-purple">代码：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * P13 根据条件求数字</span><br><span class="line"> * @autor Philstar</span><br><span class="line"> */</span><br><span class="line">package top.philxin.practice;</span><br><span class="line"></span><br><span class="line">public class P13 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		long startTime = System.currentTimeMillis();</span><br><span class="line">		for(int i=0;i&lt;100000;i++) &#123;</span><br><span class="line">			int x=(int)Math.sqrt(i+100);</span><br><span class="line">			int y=(int)Math.sqrt(i+268);</span><br><span class="line">			if(x*x==i+100 &amp;&amp; y*y==i+268) &#123;</span><br><span class="line">				System.out.println(&quot;这个数是：&quot;+i);</span><br><span class="line">				continue;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		long endTime = System.currentTimeMillis();</span><br><span class="line">		System.out.println(&quot;Time:&quot; + (endTime - startTime));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-green">结果：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">这个数是：21</span><br><span class="line">这个数是：261</span><br><span class="line">这个数是：1581</span><br><span class="line">Time:4</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="P14"><a href="#P14" class="headerlink" title="P14"></a>P14</h2><p><span id="inline-blue">题目：</span><br>输入某年某月某日，判断这一天是这一年的第几天？ </p>
+<blockquote>
+<p><strong>分析：</strong> 以 3 月 5 日为例，应该先把前两个月的加起来，然后再加上 5 天即本年的第几天，特殊情况，<br>闰年且输入月份大于 3 时需考虑多加一天。 </p>
+</blockquote>
+<p><span id="inline-purple">代码：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * P13 根据条件求数字</span><br><span class="line"> * @autor Philstar</span><br><span class="line"> */</span><br><span class="line">package top.philxin.practice;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class P14 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Scanner sc=new Scanner(System.in);</span><br><span class="line">		System.out.print(&quot;请输入年份：&quot;);</span><br><span class="line">		int year=sc.nextInt();</span><br><span class="line">		System.out.print(&quot;请输入月份：&quot;);</span><br><span class="line">		int month=sc.nextInt();</span><br><span class="line">		System.out.print(&quot;请输入几日：&quot;);</span><br><span class="line">		int day=sc.nextInt();</span><br><span class="line">		int daysum=0;</span><br><span class="line">		int[] _month= &#123;31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 &#125;;</span><br><span class="line">		if(month&gt;12 &amp;&amp; day&gt;31)&#123;</span><br><span class="line">			System.out.println(&quot;输入有误！&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		for(int i=0;i&lt;month-1;i++) &#123;</span><br><span class="line">			daysum+=_month[i];</span><br><span class="line">		&#125;</span><br><span class="line">		if(month==1)</span><br><span class="line">			daysum=day;</span><br><span class="line">		else</span><br><span class="line">			day+=daysum;</span><br><span class="line">		if(year%4==0 &amp;&amp; (year%100!=0 || year%400==0) &amp;&amp; month&gt;2) &#123;</span><br><span class="line">			day++;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;这一天是这一年的第&quot;+day+&quot;天&quot;);</span><br><span class="line">		sc.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-green">结果：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">请输入年份：2000</span><br><span class="line">请输入月份：12</span><br><span class="line">请输入几日：31</span><br><span class="line">这一天是这一年的第366天</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="P15-排序"><a href="#P15-排序" class="headerlink" title="P15 排序"></a>P15 排序</h2><p><span id="inline-blue">题目：</span><br>输入三个整数 x,y,z，请把这三个数由小到大输出</p>
+<blockquote>
+<p><strong>分析：</strong>   把最小的数放到 x 上，先将 x 与 y 进行比较，如果 x&gt;y 则将 x 与 y 的值进行交换，<br>然后再用 x 与 z 进行比较，如果 x&gt;z 则将 x 与 z 的值进行交换，这样能使 x 最小。</p>
+</blockquote>
+<p><span id="inline-purple">代码：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * P15 排序</span><br><span class="line"> * @autor Philstar</span><br><span class="line"> */</span><br><span class="line">package top.philxin.practice;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class P15 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		Scanner sc=new Scanner(System.in);</span><br><span class="line">		System.out.print(&quot;请随机输入三个数：&quot;);</span><br><span class="line">		int x=sc.nextInt();</span><br><span class="line">		int y=sc.nextInt();</span><br><span class="line">		int z=sc.nextInt();</span><br><span class="line">		int temp;</span><br><span class="line">		while(true) &#123;</span><br><span class="line">		if(x&gt;y) &#123;</span><br><span class="line">			temp=x;</span><br><span class="line">			x=y;</span><br><span class="line">			y=temp;	</span><br><span class="line">		&#125;</span><br><span class="line">		if(x&gt;z)&#123;</span><br><span class="line">			temp=x;</span><br><span class="line">			z=x;</span><br><span class="line">			x=temp;</span><br><span class="line">		&#125;</span><br><span class="line">		if(x&lt;y &amp;&amp; y&lt;z)</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(x+&quot;&lt;&quot;+y+&quot;&lt;&quot;+z);</span><br><span class="line">		sc.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-green">结果：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">请随机输入三个数：56 26 94</span><br><span class="line">26&lt;56&lt;94</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="P16-9-9-表"><a href="#P16-9-9-表" class="headerlink" title="P16 9*9 表"></a>P16 9*9 表</h2><p><span id="inline-blue">题目：</span><br>输出 9*9 口诀<br><span id="inline-purple">代码：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * P16 9*9 表</span><br><span class="line"> * @autor Philstar</span><br><span class="line"> */</span><br><span class="line">package top.philxin.practice;</span><br><span class="line"></span><br><span class="line">public class P16 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		for(int i=1;i&lt;=9;i++) &#123;</span><br><span class="line">			for(int j=1;j&lt;=i;j++) &#123;</span><br><span class="line">				System.out.print(j+&quot;*&quot;+i+ &quot;=&quot;+i*j+&quot;	&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.print(&quot;\n&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-green">结果：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1*1=1	</span><br><span class="line">1*2=2	2*2=4	</span><br><span class="line">1*3=3	2*3=6	3*3=9	</span><br><span class="line">1*4=4	2*4=8	3*4=12	4*4=16	</span><br><span class="line">1*5=5	2*5=10	3*5=15	4*5=20	5*5=25	</span><br><span class="line">1*6=6	2*6=12	3*6=18	4*6=24	5*6=30	6*6=36	</span><br><span class="line">1*7=7	2*7=14	3*7=21	4*7=28	5*7=35	6*7=42	7*7=49	</span><br><span class="line">1*8=8	2*8=16	3*8=24	4*8=32	5*8=40	6*8=48	7*8=56	8*8=64	</span><br><span class="line">1*9=9	2*9=18	3*9=27	4*9=36	5*9=45	6*9=54	7*9=63	8*9=72	9*9=81</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="P17-猴子吃桃问题"><a href="#P17-猴子吃桃问题" class="headerlink" title="P17 猴子吃桃问题"></a>P17 猴子吃桃问题</h2><p><span id="inline-blue">题目：</span><br>猴子第一天摘下若干个桃子，当即吃了一半，还不瘾，又多吃了一个 第二天早上又<br>将剩下的桃子吃掉一半，又多吃了一个。以后每天早上都吃了前一天剩下的一半零一个。到第 10 天早上想<br>再吃时，见只剩下一个桃子了。求第一天共摘了多少。 </p>
+<blockquote>
+<p><strong>分析：</strong>   采取逆向思维的方法，从后往前推断</p>
+</blockquote>
+<p><span id="inline-purple">代码：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * P17 猴子吃桃子问题</span><br><span class="line"> * @autor Philstar</span><br><span class="line"> */</span><br><span class="line">package top.philxin.practice;</span><br><span class="line"></span><br><span class="line">public class P17 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int count=1;</span><br><span class="line">		for(int i=10;i&gt;1;i--) &#123;</span><br><span class="line">			count=(count+1)*2;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;当天摘了&quot;+count+&quot;个桃子&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-green">结果：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">当天摘了1534个桃子</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="P18-乒乓球赛"><a href="#P18-乒乓球赛" class="headerlink" title="P18 乒乓球赛"></a>P18 乒乓球赛</h2><p><span id="inline-blue">题目：</span><br>两个乒乓球队进行比赛，各出三人。甲队为 a,b,c 三人，乙队为 x,y,z 三人。已抽签决定比赛名单。<br>有人向队员打听比赛的名单。a 说他不和 x 比，c 说他不和 x,z 比，请编程序找出三队赛手的名单。</p>
+<p><span id="inline-purple">代码：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * P18 乒乓球赛</span><br><span class="line"> * @autor Philstar</span><br><span class="line"> */</span><br><span class="line">package top.philxin.practice;</span><br><span class="line"></span><br><span class="line">public class P18 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		char a=&apos; &apos;,c=&apos; &apos;,b=&apos; &apos;,str;</span><br><span class="line">		for(str=&apos;x&apos;;str&lt;=&apos;z&apos;;str++) &#123;</span><br><span class="line">			if(str!=&apos;x&apos; &amp;&amp; str!=&apos;z&apos;)	//c不与x与z对打</span><br><span class="line">				c=str;</span><br><span class="line">		&#125;</span><br><span class="line">		for(str=&apos;x&apos;;str&lt;=&apos;z&apos;;str++) &#123;</span><br><span class="line">			if(str!=&apos;x&apos; &amp;&amp; str!=c)		//a不与x对打且与c对手不同</span><br><span class="line">				a=str;</span><br><span class="line">		&#125;</span><br><span class="line">		for(str=&apos;x&apos;;str&lt;=&apos;z&apos;;str++) &#123;</span><br><span class="line">			if(str!=a &amp;&amp; str!=c)		//b不与a和c的对手打</span><br><span class="line">				b=str;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;a的对手是：&quot;+a+&quot;\nb的对手是：&quot;+b+&quot;\nc的对手是：&quot;+c);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-green">结果：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a的对手是：z</span><br><span class="line">b的对手是：x</span><br><span class="line">c的对手是：y</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="P19-打印菱形图案"><a href="#P19-打印菱形图案" class="headerlink" title="P19 打印菱形图案"></a>P19 打印菱形图案</h2><p><span id="inline-blue">题目：</span><br>打印菱形图案</p>
+<blockquote>
+<p><strong>分析：</strong>   先把图形分成两部分来看待，前四行一个规律，后三行一个规律，利用双重 for 循环，第一层<br>控制行，第二层控制列。</p>
+</blockquote>
+<p><span id="inline-purple">代码：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * P19 打印菱形图案</span><br><span class="line"> * @autor Philstar</span><br><span class="line"> */</span><br><span class="line">package top.philxin.practice;</span><br><span class="line"></span><br><span class="line">public class P19 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		int i,j;</span><br><span class="line">		for(i=0;i&lt;7;i++) &#123;</span><br><span class="line">			if(i&lt;=3) &#123;</span><br><span class="line">				for(j=0;j&lt;5-i;j++)</span><br><span class="line">					System.out.print(&quot; &quot;);</span><br><span class="line">				for(j=0;j&lt;1+2*i;j++)</span><br><span class="line">					System.out.print(&quot;*&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">			if(i&gt;3) &#123;</span><br><span class="line">				for(j=0;j&lt;5-(6-i);j++)</span><br><span class="line">					System.out.print(&quot; &quot;);</span><br><span class="line">				for(j=0;j&lt;1+2*(6-i);j++)</span><br><span class="line">					System.out.print(&quot;*&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.print(&quot;\n&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-green">结果：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   *</span><br><span class="line">  ***</span><br><span class="line"> *****</span><br><span class="line">*******</span><br><span class="line"> *****</span><br><span class="line">  ***</span><br><span class="line">   *</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="P20-求前-20-项之和"><a href="#P20-求前-20-项之和" class="headerlink" title="P20 求前 20 项之和"></a>P20 求前 20 项之和</h2><p><span id="inline-blue">题目：</span><br>有一分数序列：2/1，3/2，5/3，8/5，13/8，21/13…求出这个数列的前 20 项之和。 </p>
+<blockquote>
+<p><strong>分析：</strong>  每下一项的分子都为前面一项的分子与分母的和，分母都为上一项的分子。</p>
+</blockquote>
+<p><span id="inline-purple">代码：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * P20 求前20项和</span><br><span class="line"> * @autor Philstar</span><br><span class="line"> */</span><br><span class="line">package top.philxin.practice;</span><br><span class="line"></span><br><span class="line">public class P20 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		double x=2,y=1,sum=0,temp=0;</span><br><span class="line">		for(int i=0;i&lt;20;i++) &#123;</span><br><span class="line">			sum+=x/y;//求和</span><br><span class="line">			temp=x;	//将分子x的值通过temp赋给下一个分数的分母y</span><br><span class="line">			x+=y;	//下一个分数分子x的值</span><br><span class="line">			y=temp;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;这个数列前20项和为：&quot;+sum);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-green">结果：</span></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这个数列前20项和为：32.66026079864164</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+	  <div style="text-align:center;color: #ccc;font-size:14px; margin:40px 0 40px 0">---------------- The End ----------------</div>
+    
+        
+      
+	  
+	  <div>
+	  <p id="div-border-left-red">
+	   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
+	    <span>
+	    <b>本文地址：</b><a href="/2019/09/03/基础算法题-P11-P20/" title="基础算法题 P11-P20">https://philxin.top/2019/09/03/基础算法题-P11-P20/</a><br/><b>转载请注明出处，谢谢！</b>
+	    </span>
+	  </p>
+	  </div>
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/基础算法/" rel="tag"><i class="fa fa-tag"></i># 基础算法</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/09/02/基础算法题-P01-p10/" rel="next" title="基础算法题 P01-P10">
+                  <i class="fa fa-chevron-left"></i> 基础算法题 P01-P10
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    <div class="comments" id="comments"></div>
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc" data-target="post-toc-wrap">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc">
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#P11-求不重复数字"><span class="nav-number">1.</span> <span class="nav-text">P11 求不重复数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P12-计算奖金"><span class="nav-number">2.</span> <span class="nav-text">P12 计算奖金</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P13-根据条件求数字"><span class="nav-number">3.</span> <span class="nav-text">P13 根据条件求数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P14"><span class="nav-number">4.</span> <span class="nav-text">P14</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P15-排序"><span class="nav-number">5.</span> <span class="nav-text">P15 排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P16-9-9-表"><span class="nav-number">6.</span> <span class="nav-text">P16 9*9 表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P17-猴子吃桃问题"><span class="nav-number">7.</span> <span class="nav-text">P17 猴子吃桃问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P18-乒乓球赛"><span class="nav-number">8.</span> <span class="nav-text">P18 乒乓球赛</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P19-打印菱形图案"><span class="nav-number">9.</span> <span class="nav-text">P19 打印菱形图案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P20-求前-20-项之和"><span class="nav-number">10.</span> <span class="nav-text">P20 求前 20 项之和</span></a></li></ol></div>
+          </div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="https://s2.ax1x.com/2019/08/22/matBMF.jpg"
+      alt="CodeWang">
+  <p class="site-author-name" itemprop="name">CodeWang</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/Phil-star" title="GitHub &rarr; https://github.com/Phil-star" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:18892621927m@sina.cn" title="E-Mail &rarr; mailto:18892621927m@sina.cn" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://weibo.com/yourname" title="Weibo &rarr; https://weibo.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://twitter.com/yourname" title="Twitter &rarr; https://twitter.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+    
+  </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">CodeWang</span>
+</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.3.0</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/post-details.js?v=7.3.0"></script>
+
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'gyUaGBGA1Owo3yc7mYuFVdi9-gzGzoHsz',
+    appKey: '8N1P7nmObWxGwOTqIQhEAhGe',
+    placeholder: '看到这里了，不举手发个言吗',
+    avatar: 'identicon',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname
+  });
+}, window.Valine);
+</script>
+
+</body>
+</html>
