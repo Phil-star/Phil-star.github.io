@@ -54,15 +54,21 @@
   };
 </script>
 
-  <meta name="keywords" content="Java,数据结构,队列">
+  <meta name="description" content="QueueQueue 是一个 FIFO（先进先出）的数据结构，并发中使用较多，可以安全地将对象从一个任务传给另一个任务。其形式类似于日常生活中的排队。">
+<meta name="keywords" content="Java,数据结构,队列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java DataStructure-Queue">
 <meta property="og:url" content="https://philxin.top/2019/09/26/Java-DataStructure/index.html">
 <meta property="og:site_name" content="Philstar&#39;s Blog">
+<meta property="og:description" content="QueueQueue 是一个 FIFO（先进先出）的数据结构，并发中使用较多，可以安全地将对象从一个任务传给另一个任务。其形式类似于日常生活中的排队。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-26T15:07:26.413Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/09/28/ulmOje.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/09/28/uldio6.png">
+<meta property="og:updated_time" content="2019-09-28T07:53:46.230Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java DataStructure-Queue">
+<meta name="twitter:description" content="QueueQueue 是一个 FIFO（先进先出）的数据结构，并发中使用较多，可以安全地将对象从一个任务传给另一个任务。其形式类似于日常生活中的排队。">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/09/28/ulmOje.png">
   <link rel="canonical" href="https://philxin.top/2019/09/26/Java-DataStructure/">
 
 
@@ -260,11 +266,19 @@
                 
               
 
-              <time title="创建时间：2019-09-26 22:15:54 / 修改时间：23:07:26" itemprop="dateCreated datePublished" datetime="2019-09-26T22:15:54+08:00">2019-09-26</time>
+              <time title="创建时间：2019-09-26 22:15:54" itemprop="dateCreated datePublished" datetime="2019-09-26T22:15:54+08:00">2019-09-26</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-28 15:53:46" itemprop="dateModified" datetime="2019-09-28T15:53:46+08:00">2019-09-28</time>
+              </span>
             
           
             <span class="post-meta-item">
@@ -273,7 +287,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaS数据结构/" itemprop="url" rel="index"><span itemprop="name">JavaS数据结构</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java数据结构/" itemprop="url" rel="index"><span itemprop="name">Java数据结构</span></a></span>
 
                 
                 
@@ -314,7 +328,36 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h2 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a><strong>Queue</strong></h2><p><strong>Queue 是一个 FIFO（先进先出）的数据结构，并发中使用较多，可以安全地将对象从一个任务传给另一个任务。其形式类似于日常生活中的排队。</strong></p><a id="more"></a>
+<blockquote>
+<p>  Java 集合中的 Queue 继承自 Collection 接口 ，Deque, LinkedList, PriorityQueue,  BlockingQueue 等类都实现了它。<br>Queue 用来存放 等待处理元素 的集合，这种场景一般用于缓冲、并发访问。<br>除了继承 Collection 接口的一些方法，Queue 还添加了额外的 添加、删除、查询操作。</p>
+</blockquote>
+<h2 id="Queue-Method-Introduction"><a href="#Queue-Method-Introduction" class="headerlink" title="Queue Method Introduction"></a><strong>Queue Method Introduction</strong></h2><p><img src="https://s2.ax1x.com/2019/09/28/ulmOje.png" alt="queue.png"></p>
+<blockquote>
+<p>优先考虑右侧方法</p>
+</blockquote>
+<h3 id="add-E-offer-E-在尾部添加"><a href="#add-E-offer-E-在尾部添加" class="headerlink" title="add(E), offer(E) 在尾部添加:"></a><em>add(E), offer(E) 在尾部添加:</em></h3><blockquote>
+<p><strong>区别：</strong>一些队列有大小限制，因此如果想在一个满的队列中加入一个新项，多出的项就会被拒绝。<br>这时新的 offer 方法就可以起作用了。它不是对调用 add() 方法抛出一个 unchecked 异常，而只是得到由 offer() 返回的 false。</p>
+</blockquote>
+<h3 id="remove-poll-删除并返回头部："><a href="#remove-poll-删除并返回头部：" class="headerlink" title="remove(), poll() 删除并返回头部："></a><em>remove(), poll() 删除并返回头部：</em></h3><blockquote>
+<p>区别：remove() 和 poll() 方法都是从队列中删除第一个元素。remove() 的行为与 Collection 接口的版本相似， 但是新的 poll() 方法在用空集合调用时不是抛出异常，只是返回 null。因此新的方法更适合容易出现异常条件的情况。</p>
+</blockquote>
+<h3 id="peek，-element-获取但不删除"><a href="#peek，-element-获取但不删除" class="headerlink" title="peek， element 获取但不删除"></a><em>peek， element 获取但不删除</em></h3><blockquote>
+<p><strong>区别：</strong>element() 和 peek() 用于在队列的头部查询元素。与 remove() 方法类似，在队列为空时， element() 抛出一个异常，而 peek() 返回 null。</p>
+</blockquote>
+<p><span id="inline-purple">代码实现：</span></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> DataStructure;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.Queue;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QueueType</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Queue&lt;String&gt; queue = <span class="keyword">new</span> LinkedList&lt;String&gt;();</span><br><span class="line">        queue.offer(<span class="string">"a"</span>);</span><br><span class="line">        queue.offer(<span class="string">"b"</span>);</span><br><span class="line">        queue.offer(<span class="string">"c"</span>);</span><br><span class="line">        queue.offer(<span class="string">"d"</span>);</span><br><span class="line">        queue.offer(<span class="string">"e"</span>);</span><br><span class="line">        <span class="keyword">for</span>(String x:queue)</span><br><span class="line">            System.out.print(x + <span class="string">" "</span>);</span><br><span class="line">        System.out.print(<span class="string">"\n*********************\n"</span>);</span><br><span class="line">        System.out.println(<span class="string">"pull="</span> + queue.poll() +<span class="string">"    remove="</span> +queue.remove()); <span class="comment">// 返回头俩个元素，并在队列中删除</span></span><br><span class="line">        <span class="keyword">for</span>(String x:queue)</span><br><span class="line">            System.out.print(x + <span class="string">" "</span>);</span><br><span class="line">        System.out.print(<span class="string">"\n*********************\n"</span>);</span><br><span class="line">        System.out.println(<span class="string">"element="</span> + queue.element());   <span class="comment">// 返回当前队列中的第一个元素</span></span><br><span class="line">        <span class="keyword">for</span>(String x:queue)</span><br><span class="line">            System.out.print(x + <span class="string">" "</span>);</span><br><span class="line">        System.out.println(<span class="string">"\npeek="</span> + queue.peek());         <span class="comment">// 返回当前队列中的第一个元素</span></span><br><span class="line">        <span class="keyword">for</span>(String x:queue)</span><br><span class="line">            System.out.print(x + <span class="string">" "</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-green">演示结果：</span> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a b c d e </span><br><span class="line">*********************</span><br><span class="line">pull=a    remove=b</span><br><span class="line">c d e </span><br><span class="line">*********************</span><br><span class="line">element=c</span><br><span class="line">c d e </span><br><span class="line">peek=c</span><br><span class="line">c d e</span><br></pre></td></tr></table></figure>
+
+<h2 id="Deque"><a href="#Deque" class="headerlink" title="Deque"></a><strong>Deque</strong></h2><p><strong>双端队列（deque，全名double-ended queue）可以让你在任何一端添加或者移除元素，因此它是一种具有队列和栈性质的数据结构。</strong><br><img src="https://s2.ax1x.com/2019/09/28/uldio6.png" alt="Deque.png"></p>
+<p><strong><a href="https://www.runoob.com/manual/jdk1.6/java/util/Deque.html" target="_blank" rel="noopener">Deque方法详解</a></strong></p>
+<p><span id="inline-purple">代码实现：</span></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> DataStructure;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Deque;</span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DequeType</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Deque&lt;String&gt; dq = <span class="keyword">new</span> LinkedList&lt;String&gt;();</span><br><span class="line">        dq.offerFirst(<span class="string">"a"</span>);</span><br><span class="line">        dq.offerFirst(<span class="string">"b"</span>);</span><br><span class="line">        dq.offerLast(<span class="string">"c"</span>);</span><br><span class="line">        dq.offerLast(<span class="string">"d"</span>);</span><br><span class="line">        <span class="keyword">for</span>(String x:dq)</span><br><span class="line">            System.out.print(x + <span class="string">" "</span>);</span><br><span class="line">        System.out.print(<span class="string">"\n*********************\n"</span>);</span><br><span class="line">        System.out.println(dq.removeFirst());       <span class="comment">// 读取头部的一个元素，并将其移除</span></span><br><span class="line">        <span class="keyword">for</span>(String x:dq)</span><br><span class="line">            System.out.print(x + <span class="string">" "</span>);</span><br><span class="line">        System.out.print(<span class="string">"\n*********************\n"</span>);</span><br><span class="line">        System.out.println(dq.pollLast());            <span class="comment">// 读取尾部的一个元素，并将其移除</span></span><br><span class="line">        <span class="keyword">for</span>(String x:dq)</span><br><span class="line">            System.out.print(x + <span class="string">" "</span>);</span><br><span class="line">        System.out.print(<span class="string">"\n*********************\n"</span>);</span><br><span class="line">        System.out.print(dq.peekLast());            <span class="comment">// 获取尾部的一个元素</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span id="inline-green">演示结果：</span> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">b a c d </span><br><span class="line">*********************</span><br><span class="line">b</span><br><span class="line">a c d </span><br><span class="line">*********************</span><br><span class="line">d</span><br><span class="line">a c </span><br><span class="line">*********************</span><br><span class="line">c</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -414,6 +457,10 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc">
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Queue"><span class="nav-number">1.</span> <span class="nav-text">Queue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Queue-Method-Introduction"><span class="nav-number">2.</span> <span class="nav-text">Queue Method Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#add-E-offer-E-在尾部添加"><span class="nav-number">2.1.</span> <span class="nav-text">add(E), offer(E) 在尾部添加:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remove-poll-删除并返回头部："><span class="nav-number">2.2.</span> <span class="nav-text">remove(), poll() 删除并返回头部：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#peek，-element-获取但不删除"><span class="nav-number">2.3.</span> <span class="nav-text">peek， element 获取但不删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deque"><span class="nav-number">3.</span> <span class="nav-text">Deque</span></a></li></ol></div>
+          </div>
+        
       </div>
       <!--/noindex-->
 
