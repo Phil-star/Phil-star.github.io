@@ -63,7 +63,7 @@
 <meta property="og:description" content="继承Extends继承的概念：  继承是java面向对象编程技术的一块基石，因为它允许创建分等级层次的类。继承就是子类继承父类的特征和行为，使得子类对象（实例）具有父类的实例域和方法，或子类从父类继承方法，使得子类具有父类相同的行为。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2019/08/25/mcuXBF.png">
-<meta property="og:updated_time" content="2019-09-29T03:00:41.265Z">
+<meta property="og:updated_time" content="2019-10-01T07:43:18.250Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础篇（四） 面向对象提高">
 <meta name="twitter:description" content="继承Extends继承的概念：  继承是java面向对象编程技术的一块基石，因为它允许创建分等级层次的类。继承就是子类继承父类的特征和行为，使得子类对象（实例）具有父类的实例域和方法，或子类从父类继承方法，使得子类具有父类相同的行为。">
@@ -186,7 +186,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">14</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">17</span></a>
 
   </li>
       
@@ -212,7 +212,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">16</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">17</span></a>
 
   </li>
   </ul>
@@ -276,7 +276,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-29 11:00:41" itemprop="dateModified" datetime="2019-09-29T11:00:41+08:00">2019-09-29</time>
+                <time title="修改时间：2019-10-01 15:43:18" itemprop="dateModified" datetime="2019-10-01T15:43:18+08:00">2019-10-01</time>
               </span>
             
           
@@ -386,7 +386,49 @@
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 测试多态Polymorphism</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Philstar</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">package</span> Practice;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestPolym</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Dog dog=<span class="keyword">new</span> Dog();</span><br><span class="line">        dog.move();                     <span class="comment">//执行的是子类的重写方法</span></span><br><span class="line"></span><br><span class="line">        Animal a=<span class="keyword">new</span> Animal();</span><br><span class="line">        animalVoice(a);</span><br><span class="line">        animalVoice(dog);</span><br><span class="line">        animalVoice(<span class="keyword">new</span> Cat());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">animalVoice</span><span class="params">(Animal a)</span></span>&#123;  <span class="comment">//多态（通过传入的形参判断调用哪个重写方法）</span></span><br><span class="line">        a.shout();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.print(<span class="string">"动物可以移动"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Person <span class="title">WhoIsPsg</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Person();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shout</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"叫了一声！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span></span>&#123;              <span class="comment">//子类可以重写其父类的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.print(<span class="string">"狗可以移动"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Student <span class="title">WhoIsPsg</span><span class="params">()</span></span>&#123;      <span class="comment">//返回值类型要小于其父类的返回值类型</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Student();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shout</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"狗的叫声：汪"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">extends</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shout</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"猫的叫声：喵"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="抽象方法与抽象类（Abstract）"><a href="#抽象方法与抽象类（Abstract）" class="headerlink" title="抽象方法与抽象类（Abstract）"></a>抽象方法与抽象类（Abstract）</h2><p><strong>抽象方法：</strong><br>使用abstract修饰的方法，没有方法体，只有声明。建义的屋一种‘规范”，就是告诉子类必须器给油象方法提供具体的实现。  </p>
+<p><strong>抽象类：</strong><br>包含轴象方法的类就是轴象类，通过abstract方法建义规范，然后覆求子类必须建义属体实现。通过抽象类，我们就可以做到严格根制子类的设计，使子类之间要加通用。</p>
+<blockquote>
+<p><strong>抽象类的使用要点：</strong> </p>
+<ol>
+<li>有抽象方法的类只能定义成抽象类  </li>
+<li>抽象类不能实例化，即不能用new来实例化糖象类。  </li>
+<li>抽象类可以包含属性、方法、构造方法，但是构造方法不能用来new实例，只能用来被子类调用。  </li>
+<li>抽象类只能用来被地承。  </li>
+<li>抽象方法必须被子类实现。  </li>
+</ol>
+</blockquote>
+<h2 id="接口（Interface）"><a href="#接口（Interface）" class="headerlink" title="接口（Interface）"></a>接口（Interface）</h2><p><strong>为什么需要接口？接口和抽象类的区别？</strong></p>
+<pre><code>接口就是比“抽象类”还“抽象”的“抽象类”，可以更加规范的对子类进行约束。全面地专业地实现了：规范和具体实现的分离。  
 
+抽象类还提供某些具体实现，接口不提供任何实现，接口中所有方法都是抽象方法。接口是完全面向规范的，规定了一批类具有的公共方法规范。  
+
+从接口的实现者角度看，接口定义了可以向外部提供的服务。从接口的调用者角度看，接口定义了实现者能提供那些服务。  
+
+接口是两个模块之间通信的标准，通信的规范。如果能把你要设计的模块之间的接口定义好，就相当于完成了系统的设计大纲，剩下的就是添砖加瓦的具体实现了。大家在工作以后，做系统时往往就是使用“面向接口”的思想来设计系统。  
+
+接口和实现类不是父子关系，是实现规则的关系。比如：我定义一个接口Runnable，Car实现它就能在地上跑,Train实现它也能在地上跑，飞机实现它也能在地上跑，就是说，如果它是交通工具，就一定能跑，但是一定要实现  Runnable接口。  </code></pre><p><strong>接口的格式申明：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[访问修饰符]    interface   接口名  [extends 父接口1, 父接口2] &#123;</span><br><span class="line"></span><br><span class="line">    常量定义;</span><br><span class="line">    方法定义;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>定义接口的详细说明：</strong></p>
+<pre><code>1.访问修饰符：只能是public或默认。
+
+2.接口名：和类名采用相同命名机制。
+
+3.extends：接口可以多继承。
+
+4.常量：接口中的属性只能是常量，总是：public static final修饰。不写也是。
+
+5.方法：接口中的方法只能是：public abstract.省略的话，也是public abstract.</code></pre><p><strong>要点：</strong></p>
+<pre><code>1.子类通过Implements来实现接口中的规范。  
+
+2.接口不能创建实例，但是可用于声明引用变量类型。  
+
+3.一个类实现了接口，必须实现接口中所有的方法，并且这些方法只能是public的。  
+
+4.JDK1.7之前，接口中只能包含静态常量、抽象方法，不能有普通属性、构造方法、普通方法。  
+
+5.JDK1.8后，接口中包含普通的静态方法。</code></pre>
     </div>
 
     
@@ -489,7 +531,7 @@
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc">
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#继承Extends"><span class="nav-number">1.</span> <span class="nav-text">继承Extends</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重写Override"><span class="nav-number">2.</span> <span class="nav-text">重写Override</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#toString方法重写"><span class="nav-number">2.1.</span> <span class="nav-text">toString方法重写</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装Encapsulation"><span class="nav-number">3.</span> <span class="nav-text">封装Encapsulation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多态Polymorphism"><span class="nav-number">4.</span> <span class="nav-text">多态Polymorphism</span></a></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#继承Extends"><span class="nav-number">1.</span> <span class="nav-text">继承Extends</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重写Override"><span class="nav-number">2.</span> <span class="nav-text">重写Override</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#toString方法重写"><span class="nav-number">2.1.</span> <span class="nav-text">toString方法重写</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装Encapsulation"><span class="nav-number">3.</span> <span class="nav-text">封装Encapsulation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多态Polymorphism"><span class="nav-number">4.</span> <span class="nav-text">多态Polymorphism</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象方法与抽象类（Abstract）"><span class="nav-number">5.</span> <span class="nav-text">抽象方法与抽象类（Abstract）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口（Interface）"><span class="nav-number">6.</span> <span class="nav-text">接口（Interface）</span></a></li></ol></div>
           </div>
         
       </div>
@@ -509,7 +551,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -577,7 +619,13 @@
         
           
         
-        <span class="site-state-item-count">14</span>
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

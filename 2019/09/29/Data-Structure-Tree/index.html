@@ -54,18 +54,21 @@
   };
 </script>
 
-  <meta name="description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-BaiWzUbq&quot;),             narrow: false,             autoplay: false,             showlrc: f">
-<meta name="keywords" content="数据结构,树(Tree)">
+  <meta name="description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-sbEvJIoO&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+<meta name="keywords" content="数据结构,树(Tree),BinaryTree">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Data Structure-Tree">
+<meta property="og:title" content="Java DataStructure-Tree">
 <meta property="og:url" content="https://philxin.top/2019/09/29/Data-Structure-Tree/index.html">
 <meta property="og:site_name" content="Philstar&#39;s Blog">
-<meta property="og:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-BaiWzUbq&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+<meta property="og:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-sbEvJIoO&quot;),             narrow: false,             autoplay: false,             showlrc: f">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-30T12:30:59.581Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/09/30/ut5n2V.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/10/01/uN04TU.png">
+<meta property="og:updated_time" content="2019-10-02T13:30:14.758Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Data Structure-Tree">
-<meta name="twitter:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-BaiWzUbq&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+<meta name="twitter:title" content="Java DataStructure-Tree">
+<meta name="twitter:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-sbEvJIoO&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/09/30/ut5n2V.png">
   <link rel="canonical" href="https://philxin.top/2019/09/29/Data-Structure-Tree/">
 
 
@@ -80,7 +83,7 @@
   };
 </script>
 
-  <title>Data Structure-Tree | Philstar's Blog</title>
+  <title>Java DataStructure-Tree | Philstar's Blog</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -186,7 +189,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">14</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">17</span></a>
 
   </li>
       
@@ -212,7 +215,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">16</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">17</span></a>
 
   </li>
   </ul>
@@ -249,7 +252,7 @@
       <meta itemprop="name" content="Philstar's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Data Structure-Tree
+        <h1 class="post-title" itemprop="name headline">Java DataStructure-Tree
 
           
         </h1>
@@ -276,7 +279,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-30 20:30:59" itemprop="dateModified" datetime="2019-09-30T20:30:59+08:00">2019-09-30</time>
+                <time title="修改时间：2019-10-02 21:30:14" itemprop="dateModified" datetime="2019-10-02T21:30:14+08:00">2019-10-02</time>
               </span>
             
           
@@ -327,11 +330,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div id="aplayer-BaiWzUbq" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-sbEvJIoO" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div><script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-BaiWzUbq"),
+            element: document.getElementById("aplayer-sbEvJIoO"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -350,8 +353,50 @@
           
 
 <h2 id="树的基本概念"><a href="#树的基本概念" class="headerlink" title="树的基本概念"></a>树的基本概念</h2><p>树是数据元素之间具有次层关系的非线性的结构，树是由n(n≥0)个结点组成的有限集合，n=0的树是空树，n大于0的树T由以下两个条件约定构成：</p>
-<p><strong><a href="https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%8F%89%E6%A0%91" target="_blank" rel="noopener">BinaryTree-Wiki</a></strong></p>
-
+<ul>
+<li><p>⑴.有一个特殊的结点，称为根结点（root），它没有前驱结点只有后继结点。</p>
+</li>
+<li><p>⑵.除了根结点之外的其他结点分为m(0≤m≤n)个互不相交的集合T0,T1,T2,…,Tm−1T0,T1,T2,…,Tm−1,其中吧每个集合TiTi也是一个树型结构，称之为子树(Subtree)。</p>
+</li>
+</ul>
+<p><strong>树的结构如下：</strong></p>
+<p><img src="https://s2.ax1x.com/2019/09/30/ut5n2V.png" alt="tree.png"></p>
+<blockquote>
+<p><strong>相关术语：</strong>  </p>
+<p><strong>（1）根结点：</strong> 根结点是没有双亲的结点，一棵树中最多有一个根结点（如上图的A结点）。</p>
+<p><strong>（2）孩子结点：</strong> 一棵树中，一个结点的子树的根结点称为其孩子结点，如上图的A的孩子结点右B、C、D。 </p>
+<p><strong>（3）父母结点：</strong> 相对于孩子结点而已其前驱结点即为父母结点，如上图的B、C、D 三个结点的父母结点都为A，当然E、F结点的父母结点则是B。  </p>
+<p><strong>（4）兄弟结点：</strong> 拥有相同的父母结点的所有孩子结点叫作兄弟结点，如上图B、C、D 三个结点共同父结点为&gt;A，因此它们是兄弟结点，E、F也是兄弟结点，但是F、G就肯定不是兄弟结点了<br>。<br><strong>（5）祖先结点：</strong> 如果存在一条从根结点到结点Q的路径，而且结点P出现在这条路径上，那么P就是Q的祖先结点，而结点Q也称为P的子孙结点或者后代。如上图的E的祖先结点有A和B，而E则是A和B的子孙结点。  </p>
+<p><strong>（6）叶子结点：</strong> 没有孩子结点的结点叫作叶子结点，如E、F、G、H等。  </p>
+<p><strong>（7）结点的度：</strong> 指的是结点所拥有子树的棵数。如A的度为3，F的度为0，即叶子结点的度为0，而树的度则是树中各个结点度的最大值，如图（d）树的度为3（A结点）  </p>
+<p><strong>（8）树的层：</strong> 又称结点的层，该属性反映结点处于树中的层次位置，我们约定根结点的层为1，如上图所示，A层为1，B层为2，E的层为3。  </p>
+<p><strong>（9）树的高度(深度)：</strong> 是指树中结点的最大层数，图（d）的高度为3。 </p>
+<p><strong>（10）边：</strong> 边表示从父母结点到孩子结点的链接线，如上图（d）中A到B间的连线则称为边。</p>
+</blockquote>
+<hr>
+<h2 id="BinaryTree"><a href="#BinaryTree" class="headerlink" title="BinaryTree"></a><strong>BinaryTree</strong></h2><blockquote>
+<p><em>二叉树的定义：</em> 二叉树（Binary Tree）是n(n≥0)个结点组成的有限集合，n=0时称为空二叉树；n&gt;0的二叉树由一个根结点和两棵互不相交、分别称为左子树和右子树的子二叉树构成，二叉树也是递归定义的，在树种定义的度、层次等术语，同样适用于二叉树。</p>
+</blockquote>
+<p><strong><a href="https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%8F%89%E6%A0%91" target="_blank" rel="noopener">BinaryTree-Wiki</a></strong>  </p>
+<p><span id="inline-blue"><strong>BinaryTree的重要特性：</strong></span>  </p>
+<p><strong>1. 若根结点的层次为1，则二叉树第i层最多有2^i−1(i≥1)个结点</strong></p>
+<blockquote>
+<p>数学归纳法：<br>步骤①  假设根为i=1层上唯一结点，则有2^i−1=2^0=1成立。<br>步骤②  设第i-1层最多有2^i−2，由于二叉树中每个结点的度最多为2，因此第i层最多有2^i−1个结点也成立。</p>
+</blockquote>
+<p><strong>2. 在高度为h的二叉树中，最多有2h−1个结点（h≥0）</strong></p>
+<blockquote>
+<p>由第一个性质可以推出</p>
+</blockquote>
+<p><strong>3.满二叉树和完全二叉树</strong></p>
+<blockquote>
+<p><strong>完全二叉树：</strong><br>叶节点只能出现在最下层和次下层，并且最下面一层的结点都集中在该层最左边的若干位置的二叉树。</p>
+<p><strong>满二叉树：</strong><br> 一个二叉树，如果每一个层的结点数都达到最大值，则这个二叉树就是满二叉树。也就是说，如果一个二叉树的层数为K，且结点总数是(2^k) -1 ，则它就是满二叉树。</p>
+</blockquote>
+<p><img src="https://s2.ax1x.com/2019/10/01/uN04TU.png" alt="Tree.png"></p>
+<p><strong>4.棵具有n个结点的<em>完全二叉树</em>，对于序号为i(0≤i＜n)的结点，则有如下规则</strong></p>
+<pre><code>* 若i=0，则i为根结点，无父母结点；若i&gt;0，则i的父母结点序号为⌊(i−1)/2⌋(向下取整)
+* 若2i+1＜n,则i的左孩子结点序号为2i+1，否则i无左孩子。
+* 若2i+2＞n,则i的右孩子结点序号为2i+2，否则i无右孩子。</code></pre>
     </div>
 
     
@@ -366,7 +411,7 @@
 	  <p id="div-border-left-red">
 	   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 	    <span>
-	    <b>本文地址：</b><a href="/2019/09/29/Data-Structure-Tree/" title="Data Structure-Tree">https://philxin.top/2019/09/29/Data-Structure-Tree/</a><br/><b>转载请注明出处，谢谢！</b>
+	    <b>本文地址：</b><a href="/2019/09/29/Data-Structure-Tree/" title="Java DataStructure-Tree">https://philxin.top/2019/09/29/Data-Structure-Tree/</a><br/><b>转载请注明出处，谢谢！</b>
 	    </span>
 	  </p>
 	  </div>
@@ -380,6 +425,8 @@
               <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i># 数据结构</a>
             
               <a href="/tags/树-Tree/" rel="tag"><i class="fa fa-tag"></i># 树(Tree)</a>
+            
+              <a href="/tags/BinaryTree/" rel="tag"><i class="fa fa-tag"></i># BinaryTree</a>
             
           </div>
         
@@ -398,6 +445,10 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/10/01/Java-DataStructure-Map/" rel="prev" title="Java DataStructure-Map">
+                  Java DataStructure-Map <i class="fa fa-chevron-right"></i>
+                </a>
               
             </div>
           </div>
@@ -450,7 +501,7 @@
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc">
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#树的基本概念"><span class="nav-number">1.</span> <span class="nav-text">树的基本概念</span></a></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#树的基本概念"><span class="nav-number">1.</span> <span class="nav-text">树的基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BinaryTree"><span class="nav-number">2.</span> <span class="nav-text">BinaryTree</span></a></li></ol></div>
           </div>
         
       </div>
@@ -470,7 +521,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -538,7 +589,13 @@
         
           
         
-        <span class="site-state-item-count">14</span>
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
