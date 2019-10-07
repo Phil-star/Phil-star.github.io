@@ -54,19 +54,19 @@
   };
 </script>
 
-  <meta name="description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-MOsqezDp&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+  <meta name="description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-SHdbpuZd&quot;),             narrow: false,             autoplay: false,             showlrc: f">
 <meta name="keywords" content="数据结构,哈希表(Map),HashMap">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java DataStructure-Map">
 <meta property="og:url" content="https://philxin.top/2019/10/01/Java-DataStructure-Map/index.html">
 <meta property="og:site_name" content="Philstar&#39;s Blog">
-<meta property="og:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-MOsqezDp&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+<meta property="og:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-SHdbpuZd&quot;),             narrow: false,             autoplay: false,             showlrc: f">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2019/10/02/uwSuLD.png">
-<meta property="og:updated_time" content="2019-10-02T15:00:16.438Z">
+<meta property="og:updated_time" content="2019-10-03T00:47:35.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java DataStructure-Map">
-<meta name="twitter:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-MOsqezDp&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+<meta name="twitter:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-SHdbpuZd&quot;),             narrow: false,             autoplay: false,             showlrc: f">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/10/02/uwSuLD.png">
   <link rel="canonical" href="https://philxin.top/2019/10/01/Java-DataStructure-Map/">
 
@@ -188,7 +188,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">17</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">19</span></a>
 
   </li>
       
@@ -201,7 +201,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">5</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
 
   </li>
       
@@ -214,7 +214,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">17</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">18</span></a>
 
   </li>
   </ul>
@@ -278,7 +278,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-02 23:00:16" itemprop="dateModified" datetime="2019-10-02T23:00:16+08:00">2019-10-02</time>
+                <time title="修改时间：2019-10-03 08:47:35" itemprop="dateModified" datetime="2019-10-03T08:47:35+08:00">2019-10-03</time>
               </span>
             
           
@@ -329,11 +329,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div id="aplayer-MOsqezDp" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-SHdbpuZd" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div><script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-MOsqezDp"),
+            element: document.getElementById("aplayer-SHdbpuZd"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -350,27 +350,6 @@
         </script><a id="more"></a>
         
           
-
-        <div id="aplayer-ZBuyshjn" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-ZBuyshjn"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "What Remains of Our Chalk Road",
-              author: "Circadian Eyes",
-              url: "http://music.163.com/song/media/outer/url?id=123456.mp3",
-              pic: "",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>  
 
 <h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a><strong>HashMap</strong></h2><p>HashMap底层实现采用了哈希表，这是一种非常重要的数据结构。对于我们以后理解很多技术都非常有帮助（比如：redis数据库的核心技术和HashMap一样），因此，非常有必要去理解。<br>数据结构中由数姐和链表来实现对数据的存储，他们各有特点。<br>    （1）数组：占用空间连续。寻址容易，查询速度快。但是，增加和制除效率非常低。<br>    （2）链表：占用空间不连续。寻址困难，查询速度慢，但是，增加和制除效率非常高。<br>结合其优点便衍生出了哈希表，哈希表的本质就是“数组+链表”。  </p>
 <p><img src="https://s2.ax1x.com/2019/10/02/uwSuLD.png" alt="uwSuLD.png"></p>
@@ -437,6 +416,10 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/10/04/Java面向对象-补充/" rel="prev" title="Java面向对象-补充">
+                  Java面向对象-补充 <i class="fa fa-chevron-right"></i>
+                </a>
               
             </div>
           </div>
@@ -509,7 +492,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -534,7 +517,9 @@
         
           
         
-        <span class="site-state-item-count">5</span>
+          
+        
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -583,7 +568,11 @@
         
           
         
-        <span class="site-state-item-count">17</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
