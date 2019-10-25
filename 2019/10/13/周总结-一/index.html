@@ -54,18 +54,18 @@
   };
 </script>
 
-  <meta name="description" content="ObjectObject:  概述：Object是类层次结构的根类。是所有其他类的父类。所有对象（包括数组）都实现这个类的方法。">
-<meta name="keywords" content="Collection,单链表,Exception,String,Object,Date">
+  <meta name="description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-SWhIKXae&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+<meta name="keywords" content="Collection,Exception,String,Object,Date">
 <meta property="og:type" content="article">
-<meta property="og:title" content="周总结(一))">
+<meta property="og:title" content="Summarize (one)">
 <meta property="og:url" content="https://philxin.top/2019/10/13/周总结-一/index.html">
 <meta property="og:site_name" content="Philstar&#39;s Blog">
-<meta property="og:description" content="ObjectObject:  概述：Object是类层次结构的根类。是所有其他类的父类。所有对象（包括数组）都实现这个类的方法。">
+<meta property="og:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-SWhIKXae&quot;),             narrow: false,             autoplay: false,             showlrc: f">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-25T14:17:52.112Z">
+<meta property="og:updated_time" content="2019-10-25T14:48:54.057Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="周总结(一))">
-<meta name="twitter:description" content="ObjectObject:  概述：Object是类层次结构的根类。是所有其他类的父类。所有对象（包括数组）都实现这个类的方法。">
+<meta name="twitter:title" content="Summarize (one)">
+<meta name="twitter:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-SWhIKXae&quot;),             narrow: false,             autoplay: false,             showlrc: f">
   <link rel="canonical" href="https://philxin.top/2019/10/13/周总结-一/">
 
 
@@ -80,7 +80,7 @@
   };
 </script>
 
-  <title>周总结(一)) | Philstar's Blog</title>
+  <title>Summarize (one) | Philstar's Blog</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -116,6 +116,8 @@
   </style>
 </noscript>
 
+<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -184,7 +186,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">25</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">24</span></a>
 
   </li>
       
@@ -247,7 +249,7 @@
       <meta itemprop="name" content="Philstar's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">周总结(一))
+        <h1 class="post-title" itemprop="name headline">Summarize (one)
 
           
         </h1>
@@ -274,7 +276,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-25 22:17:52" itemprop="dateModified" datetime="2019-10-25T22:17:52+08:00">2019-10-25</time>
+                <time title="修改时间：2019-10-25 22:48:54" itemprop="dateModified" datetime="2019-10-25T22:48:54+08:00">2019-10-25</time>
               </span>
             
           
@@ -325,8 +327,31 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><p>Object:  </p><pre><code>概述：Object是类层次结构的根类。是所有其他类的父类。所有对象（包括数组）都实现这个类的方法。</code></pre><a id="more"></a>
-<p>构造方法：</p>
+        <div id="aplayer-SWhIKXae" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div><script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-SWhIKXae"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "水星记",
+              author: "郭顶",
+              url: "http://music.163.com/song/media/outer/url?id=441491828.mp3",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script><a id="more"></a>
+        
+          
+
+<p><strong>内容：- Collection - Exception - String - Object - Date</strong></p>
+<h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><p>Object:  </p>
+<pre><code>概述：Object是类层次结构的根类。是所有其他类的父类。所有对象（包括数组）都实现这个类的方法。</code></pre><p>构造方法：</p>
 <pre><code>Object();
 Object类中没有任何属性
 这也是为什么默认会提供无参的构造方法。也是子类会访问父类的无参构造方法的原因。  </code></pre><p>方法：</p>
@@ -413,7 +438,60 @@ s 秒</code></pre><p><span id="inline-purple">代码实现：</span></p>
 b. 异常的类型  
 c. 异常的信息 
 d. 异常的调用栈
-e. 中断程序</code></pre>
+e. 中断程序</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">异常处理的方案：</span><br><span class="line">    a. <span class="keyword">try</span>...<span class="keyword">catch</span>...<span class="keyword">finally</span></span><br><span class="line">    b. <span class="keyword">throws</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        可能出现异常的代码</span><br><span class="line">    &#125; <span class="keyword">catch</span> (异常类型 异常名) &#123;</span><br><span class="line">        对异常的处理</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        资源的关闭</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意事项：<br>    try块里面的代码一旦出现异常，异常后面的代码不会被执行。<br>异常处理的机制：<br>    如果try语句块里面出现了异常, JVM就会把异常封装成对应类型的对象，然后抛出去.<br>    然后依次和catch语句进行匹配, 如果是对应的异常类型，就执行对应的处理。</p>
+<p>JDK7的新特性：一个catch语句可以处理多个类型的异常。这个异常之间没有子父类关系<br>    catch(ExceptionA | ExceptionB e) {</p>
+<p><span id="inline-blue">编译期异常和运行时异常的区别：</span> </p>
+<pre><code>编译期异常（受检查异常）：不管会不会发现异常，都必须检查并处理, 否则编译不通过。
+
+运行时异常：
+运行时异常(不受检查异常): 不管会不会发现异常，可以处理也可以不处理，编译都能通过。
+推荐不处理，一般出现运行时异常，都是代码逻辑有问题, 应该修改逻辑。</code></pre><p><span id="inline-blue">throws 和 throw 的区别：</span> </p>
+<pre><code>throws
+用在方法声明上，跟的是异常类名, 可以有多个异常。表示可能会抛出哪些异常。
+如果出现了异常，由调用者处理。
+
+throw
+用在方法内，跟的是异常对象，只能抛出一个异常。确确实实抛出了一个异常。
+表示抛出异常，由方法体内的语句处理</code></pre><p><span id="inline-blue">final,finally和finalize的区别:</span> </p>
+<pre><code>a. final是一个关键字.
+    变量：
+        基本数据性：变量的值不可改变
+        引用数据类型：指向同一个对象, 对象可以改变。
+    方法：方法不能被重写
+    类：类不能被继承。
+b. finally
+    try的子句。不管有没有异常，finally里面的代码都会执行。一般使用释放资源的。
+c. finalize
+   定义在Object里面的方法，
+   特点：垃圾回收期回收该对象的时候，会主动调用该方法。优点类似C++析构函数, 设计的初衷是用于释放资源的。
+   但是由于一些问题, 现在一般释放资源都放于finally语句中。</code></pre><h2 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h2><p><strong>数组和集合都是容器, 那为什么有了数组，还需要集合呢？</strong></p>
+<pre><code>a. 长度固定的
+b. 只能存储同一种类型的数据
+c. 数组没有提供方便操作的方法
+
+集合：
+a. 长度是可变的
+b. 存储多种类型的数据
+c. 集合提供方便操作的方法
+
+集合的弊端：
+a. 只能存储引用数据类型
+b. 效率没有数组高。</code></pre><p>Collection 层次结构 中的根接口。<br>    一些 collection 允许有重复的元素，而另一些则不允许。一些 collection 是有序的，而另一些则是无序的.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">方法method：</span><br><span class="line"></span><br><span class="line">    增：</span><br><span class="line">        <span class="function"><span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span></span></span><br><span class="line"><span class="function">        <span class="keyword">boolean</span> <span class="title">addAll</span><span class="params">(Collection c)</span></span></span><br><span class="line"><span class="function">    删：</span></span><br><span class="line"><span class="function">         <span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span></span><br><span class="line"><span class="function">         <span class="keyword">boolean</span> <span class="title">remove</span><span class="params">(Object o)</span></span></span><br><span class="line"><span class="function">            如果是List, 删除的是第一个元素</span></span><br><span class="line"><span class="function">         <span class="keyword">boolean</span> <span class="title">removeAll</span><span class="params">(Collection c)</span></span></span><br><span class="line"><span class="function">         <span class="keyword">boolean</span> <span class="title">retainAll</span><span class="params">(Collection c)</span></span></span><br><span class="line"><span class="function">    查：</span></span><br><span class="line"><span class="function">         <span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(Object o)</span></span></span><br><span class="line"><span class="function">         <span class="keyword">boolean</span> <span class="title">containsAll</span><span class="params">(Collection c)</span></span></span><br><span class="line"><span class="function">    判空：</span></span><br><span class="line"><span class="function">         <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    存储元素的个数：</span></span><br><span class="line"><span class="function">         <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    遍历：</span></span><br><span class="line"><span class="function">        Iterator&lt;E&gt; <span class="title">iterator</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    转换为数组：</span></span><br><span class="line"><span class="function">        Object[] <span class="title">toArray</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+
+<p><strong>JDK5后的特性：自动装箱和自动拆箱：</strong></p>
+<pre><code>装箱：基本数据类型 --&gt; 引用数据类型
+拆箱：引用数据类型 --&gt; 基本数据类型
+byte       Byte
+short      Short
+int        Integer
+long       Long
+char       Character
+float      Float
+double     Double
+boolean    Boolean</code></pre>
     </div>
 
     
@@ -428,7 +506,7 @@ e. 中断程序</code></pre>
 	  <p id="div-border-left-red">
 	   <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b><br/>
 	    <span>
-	    <b>本文地址：</b><a href="/2019/10/13/周总结-一/" title="周总结(一))">https://philxin.top/2019/10/13/周总结-一/</a><br/><b>转载请注明出处，谢谢！</b>
+	    <b>本文地址：</b><a href="/2019/10/13/周总结-一/" title="Summarize (one)">https://philxin.top/2019/10/13/周总结-一/</a><br/><b>转载请注明出处，谢谢！</b>
 	    </span>
 	  </p>
 	  </div>
@@ -440,8 +518,6 @@ e. 中断程序</code></pre>
           <div class="post-tags">
             
               <a href="/tags/Collection/" rel="tag"><i class="fa fa-tag"></i># Collection</a>
-            
-              <a href="/tags/单链表/" rel="tag"><i class="fa fa-tag"></i># 单链表</a>
             
               <a href="/tags/Exception/" rel="tag"><i class="fa fa-tag"></i># Exception</a>
             
@@ -520,7 +596,7 @@ e. 中断程序</code></pre>
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc">
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Object"><span class="nav-number">1.</span> <span class="nav-text">Object</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-toString方法："><span class="nav-number">1.1.</span> <span class="nav-text">Object toString方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-equals方法："><span class="nav-number">1.2.</span> <span class="nav-text">Object equals方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-hashCode方法："><span class="nav-number">1.3.</span> <span class="nav-text">Object hashCode方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-finalize方法："><span class="nav-number">1.4.</span> <span class="nav-text">Object finalize方法：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String"><span class="nav-number">2.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date"><span class="nav-number">3.</span> <span class="nav-text">Date</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exception"><span class="nav-number">4.</span> <span class="nav-text">Exception</span></a></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Object"><span class="nav-number">1.</span> <span class="nav-text">Object</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-toString方法："><span class="nav-number">1.1.</span> <span class="nav-text">Object toString方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-equals方法："><span class="nav-number">1.2.</span> <span class="nav-text">Object equals方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-hashCode方法："><span class="nav-number">1.3.</span> <span class="nav-text">Object hashCode方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-finalize方法："><span class="nav-number">1.4.</span> <span class="nav-text">Object finalize方法：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String"><span class="nav-number">2.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date"><span class="nav-number">3.</span> <span class="nav-text">Date</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exception"><span class="nav-number">4.</span> <span class="nav-text">Exception</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection"><span class="nav-number">5.</span> <span class="nav-text">Collection</span></a></li></ol></div>
           </div>
         
       </div>
@@ -632,9 +708,7 @@ e. 中断程序</code></pre>
         
           
         
-          
-        
-        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-count">24</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
