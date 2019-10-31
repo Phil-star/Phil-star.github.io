@@ -54,19 +54,19 @@
   };
 </script>
 
-  <meta name="description" content="为什么要线程池？简单来说使用线程池有以下几个目的： 线程是稀缺资源，不能频繁的创建。  解耦作用；线程的创建于执行完全分开，方便维护。  应当将其放入一个池子中，可以给其他任务进行复用。">
-<meta name="keywords" content="多线程,ThreadPool">
+  <meta name="description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-ZOPVvEgN&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+<meta name="keywords" content="多线程,ThreadPool,Timer-定时器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ThreadPool-线程池">
 <meta property="og:url" content="https://philxin.top/2019/10/29/ThreadPool-线程池/index.html">
 <meta property="og:site_name" content="Philstar&#39;s Blog">
-<meta property="og:description" content="为什么要线程池？简单来说使用线程池有以下几个目的： 线程是稀缺资源，不能频繁的创建。  解耦作用；线程的创建于执行完全分开，方便维护。  应当将其放入一个池子中，可以给其他任务进行复用。">
+<meta property="og:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-ZOPVvEgN&quot;),             narrow: false,             autoplay: false,             showlrc: f">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2019/10/30/K4jCvQ.png">
-<meta property="og:updated_time" content="2019-10-30T15:14:10.104Z">
+<meta property="og:updated_time" content="2019-10-31T02:30:31.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ThreadPool-线程池">
-<meta name="twitter:description" content="为什么要线程池？简单来说使用线程池有以下几个目的： 线程是稀缺资源，不能频繁的创建。  解耦作用；线程的创建于执行完全分开，方便维护。  应当将其放入一个池子中，可以给其他任务进行复用。">
+<meta name="twitter:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-ZOPVvEgN&quot;),             narrow: false,             autoplay: false,             showlrc: f">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/10/30/K4jCvQ.png">
   <link rel="canonical" href="https://philxin.top/2019/10/29/ThreadPool-线程池/">
 
@@ -118,6 +118,8 @@
   </style>
 </noscript>
 
+<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -186,7 +188,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">33</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">34</span></a>
 
   </li>
       
@@ -276,7 +278,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-30 23:14:10" itemprop="dateModified" datetime="2019-10-30T23:14:10+08:00">2019-10-30</time>
+                <time title="修改时间：2019-10-31 10:30:31" itemprop="dateModified" datetime="2019-10-31T10:30:31+08:00">2019-10-31</time>
               </span>
             
           
@@ -314,15 +316,37 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="为什么要线程池？"><a href="#为什么要线程池？" class="headerlink" title="为什么要线程池？"></a>为什么要线程池？</h2><p>简单来说使用线程池有以下几个目的：</p><ul>
+        <div id="aplayer-ZOPVvEgN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div><script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-ZOPVvEgN"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "Ｂａｎｇｋｏｋ",
+              author: "CHILLVIBE 丘稗",
+              url: "http://music.163.com/song/media/outer/url?id=566901056.mp3",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script><a id="more"></a>
+        
+          
+
+<h2 id="为什么要线程池？"><a href="#为什么要线程池？" class="headerlink" title="为什么要线程池？"></a>为什么要线程池？</h2><p>简单来说使用线程池有以下几个目的：</p>
+<ul>
 <li><p>线程是稀缺资源，不能频繁的创建。</p>
 </li>
 <li><p>解耦作用；线程的创建于执行完全分开，方便维护。</p>
 </li>
 <li><p>应当将其放入一个池子中，可以给其他任务进行复用。</p>
 </li>
-</ul><a id="more"></a>
-
+</ul>
 <hr>
 <h2 id="线程池的实现原理"><a href="#线程池的实现原理" class="headerlink" title="线程池的实现原理"></a>线程池的实现原理</h2><p><img src="https://s2.ax1x.com/2019/10/30/K4jCvQ.png" alt="K4jCvQ.png"></p>
 <ol>
@@ -375,6 +399,8 @@
               <a href="/tags/多线程/" rel="tag"><i class="fa fa-tag"></i># 多线程</a>
             
               <a href="/tags/ThreadPool/" rel="tag"><i class="fa fa-tag"></i># ThreadPool</a>
+            
+              <a href="/tags/Timer-定时器/" rel="tag"><i class="fa fa-tag"></i># Timer-定时器</a>
             
           </div>
         
@@ -571,7 +597,9 @@
         
           
         
-        <span class="site-state-item-count">33</span>
+          
+        
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

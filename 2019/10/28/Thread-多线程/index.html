@@ -54,21 +54,21 @@
   };
 </script>
 
-  <meta name="description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-NRXLDbSa&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+  <meta name="description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-EiDHKgNG&quot;),             narrow: false,             autoplay: false,             showlrc: f">
 <meta name="keywords" content="多线程,线程安全问题,synchronized,ReentrantLock,死锁,BlockingQueue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Thread_多线程">
 <meta property="og:url" content="https://philxin.top/2019/10/28/Thread-多线程/index.html">
 <meta property="og:site_name" content="Philstar&#39;s Blog">
-<meta property="og:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-NRXLDbSa&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+<meta property="og:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-EiDHKgNG&quot;),             narrow: false,             autoplay: false,             showlrc: f">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s2.ax1x.com/2019/10/28/KgYlSe.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/10/30/K5uGXd.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/10/30/K4gm9K.png">
-<meta property="og:updated_time" content="2019-10-30T14:27:19.139Z">
+<meta property="og:updated_time" content="2019-10-31T02:40:43.253Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Thread_多线程">
-<meta name="twitter:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-NRXLDbSa&quot;),             narrow: false,             autoplay: false,             showlrc: f">
+<meta name="twitter:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-EiDHKgNG&quot;),             narrow: false,             autoplay: false,             showlrc: f">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/10/28/KgYlSe.png">
   <link rel="canonical" href="https://philxin.top/2019/10/28/Thread-多线程/">
 
@@ -190,7 +190,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">33</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">34</span></a>
 
   </li>
       
@@ -280,7 +280,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-30 22:27:19" itemprop="dateModified" datetime="2019-10-30T22:27:19+08:00">2019-10-30</time>
+                <time title="修改时间：2019-10-31 10:40:43" itemprop="dateModified" datetime="2019-10-31T10:40:43+08:00">2019-10-31</time>
               </span>
             
           
@@ -331,11 +331,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div id="aplayer-NRXLDbSa" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-EiDHKgNG" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div><script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-NRXLDbSa"),
+            element: document.getElementById("aplayer-EiDHKgNG"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -501,6 +501,26 @@ c. 锁对象可以是任意对象。</code></pre><p>所以 wait(), notify() 方�
 <p>阻塞队列在java中的一种典型使用场景是线程池，在线程池中，当提交的任务不能被立即得到执行的时候，线程池就会将提交的任务放到一个阻塞的任务队列中来，比如下面的代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ExecutorService <span class="title">newFixedThreadPool</span><span class="params">(<span class="keyword">int</span> nThreads)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ThreadPoolExecutor(nThreads, nThreads,</span><br><span class="line">                                      <span class="number">0L</span>, TimeUnit.MILLISECONDS,</span><br><span class="line">                                      <span class="keyword">new</span> LinkedBlockingQueue&lt;Runnable&gt;());</span><br><span class="line">    &#125;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">**实现一个阻塞队列：**</span><br><span class="line">&lt;span id="inline-purple"&gt;代码演示：&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">``` java</span><br><span class="line"><span class="comment">/*  阻塞队列</span></span><br><span class="line"><span class="comment">阻塞队列就是一个生产者消费者模型</span></span><br><span class="line"><span class="comment">JDK：</span></span><br><span class="line"><span class="comment">    ArrayBlockingQueue</span></span><br><span class="line"><span class="comment">    LinkedBlockingQueue</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyBlockingQueue</span>&lt;<span class="title">E</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DEFAULT_CAPACITY = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">private</span> E[] elements;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> front;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> rear;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyBlockingQueue</span><span class="params">()</span></span>&#123;</span><br><span class="line">        elements = (E[]) <span class="keyword">new</span> Object[DEFAULT_CAPACITY];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyBlockingQueue</span><span class="params">(<span class="keyword">int</span> initialCapacity)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (initialCapacity &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"initialCapacity ："</span> + initialCapacity);</span><br><span class="line">        &#125;</span><br><span class="line">        elements = (E[]) <span class="keyword">new</span> Object[initialCapacity];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(E e)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (size == elements.length) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                wait();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException ex) &#123;</span><br><span class="line">                ex.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        elements[rear] = e;</span><br><span class="line">        rear = (rear + <span class="number">1</span>) % elements.length;</span><br><span class="line">        size++;</span><br><span class="line">        notifyAll();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> E <span class="title">take</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(size == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                wait();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        E e = elements[front];</span><br><span class="line">        elements[front] = <span class="keyword">null</span>;</span><br><span class="line">        front = (front + <span class="number">1</span>) % elements.length;</span><br><span class="line">        size--;</span><br><span class="line">        notifyAll();</span><br><span class="line">        <span class="keyword">return</span> e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="Some-Questions"><a href="#Some-Questions" class="headerlink" title="Some Questions"></a>Some Questions</h2><ol>
+<li><p>同步有几种方式，分别是什么?</p>
+<p> Lock<br> synchronized(同步代码块，同步方法，静态同步方法)</p>
+</li>
+<li><p>启动一个线程是run() 还是 start() ? 他们的区别？</p>
+<p> run(): 线程要执行的任务<br> start(): 调用系统的 API 启动线程，该线程会执行run()  </p>
+</li>
+<li><p>sleep() 和 wait() 方法的区别？</p>
+<p> 相同：线程都会进入阻塞状态  </p>
+<p> sleep:  </p>
+<pre><code>不会释放资源  
+Thread中的静态方法  
+必须有一个时间限制，可以被interrupt() </code></pre><p> wait:  </p>
+<pre><code>只能在同步代码块中通过锁对象调用  
+释放资源  
+Object中的成员方法  
+可以无限制地等待，等待被唤醒  </code></pre></li>
+<li><p>线程的生命周期<br> 见上图</p>
+</li>
+</ol>
 <p><strong><a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%B9%B6%E5%8F%91.md#daemon" target="_blank" rel="noopener">参考文档(一)</a></strong> <strong><a href="https://blog.csdn.net/lester_8/article/details/77098127" target="_blank" rel="noopener">，参考文档(二)</a></strong></p>
 
     </div>
@@ -613,7 +633,7 @@ c. 锁对象可以是任意对象。</code></pre><p>所以 wait(), notify() 方�
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc">
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Thread-多线程"><span class="nav-number">1.</span> <span class="nav-text">Thread-多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程的使用"><span class="nav-number">2.</span> <span class="nav-text">线程的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java线程的五种基本状态"><span class="nav-number">3.</span> <span class="nav-text">Java线程的五种基本状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础线程机制"><span class="nav-number">4.</span> <span class="nav-text">基础线程机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Executor"><span class="nav-number">4.1.</span> <span class="nav-text">Executor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Daemon"><span class="nav-number">4.2.</span> <span class="nav-text">Daemon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sleep"><span class="nav-number">4.3.</span> <span class="nav-text">sleep()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#yield"><span class="nav-number">4.4.</span> <span class="nav-text">yield()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程安全问题"><span class="nav-number">5.</span> <span class="nav-text">线程安全问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DeadLock-死锁"><span class="nav-number">6.</span> <span class="nav-text">DeadLock-死锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程间的通信（协作）"><span class="nav-number">7.</span> <span class="nav-text">线程间的通信（协作）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生产者消费者模型"><span class="nav-number">7.1.</span> <span class="nav-text">生产者消费者模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BlockingQueue"><span class="nav-number">7.2.</span> <span class="nav-text">BlockingQueue</span></a></li></ol></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Thread-多线程"><span class="nav-number">1.</span> <span class="nav-text">Thread-多线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程的使用"><span class="nav-number">2.</span> <span class="nav-text">线程的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java线程的五种基本状态"><span class="nav-number">3.</span> <span class="nav-text">Java线程的五种基本状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础线程机制"><span class="nav-number">4.</span> <span class="nav-text">基础线程机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Executor"><span class="nav-number">4.1.</span> <span class="nav-text">Executor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Daemon"><span class="nav-number">4.2.</span> <span class="nav-text">Daemon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sleep"><span class="nav-number">4.3.</span> <span class="nav-text">sleep()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#yield"><span class="nav-number">4.4.</span> <span class="nav-text">yield()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程安全问题"><span class="nav-number">5.</span> <span class="nav-text">线程安全问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DeadLock-死锁"><span class="nav-number">6.</span> <span class="nav-text">DeadLock-死锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程间的通信（协作）"><span class="nav-number">7.</span> <span class="nav-text">线程间的通信（协作）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生产者消费者模型"><span class="nav-number">7.1.</span> <span class="nav-text">生产者消费者模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BlockingQueue"><span class="nav-number">7.2.</span> <span class="nav-text">BlockingQueue</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Some-Questions"><span class="nav-number">8.</span> <span class="nav-text">Some Questions</span></a></li></ol></div>
           </div>
         
       </div>
@@ -739,7 +759,9 @@ c. 锁对象可以是任意对象。</code></pre><p>所以 wait(), notify() 方�
         
           
         
-        <span class="site-state-item-count">33</span>
+          
+        
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
